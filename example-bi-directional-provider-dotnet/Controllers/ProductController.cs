@@ -25,13 +25,13 @@ namespace Provider.Controllers
             return products;
         }
 
-        // GET /products/{type}
-        [HttpGet("{type}")]
+        // GET /products/{id}
+        [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<Product> GetProduct(string type)
+        public ActionResult<Product> GetProduct(int id)
         {
-            var product = products.FirstOrDefault(product => product.type == type);
+            var product = products.FirstOrDefault(product => product.id == id);
 
             if (product == null)
             {

@@ -43,18 +43,19 @@
         }
       }
     },
-    "/Products/{type}": {
+    "/Products/{id}": {
       "get": {
         "tags": [
           "Products"
         ],
         "parameters": [
           {
-            "name": "type",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
