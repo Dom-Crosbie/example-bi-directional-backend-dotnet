@@ -29,9 +29,9 @@ namespace Provider.Controllers
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<Product> GetProduct(int id)
+        public ActionResult<Product> GetProduct(string type)
         {
-            var product = products.FirstOrDefault(product => product.id == id);
+            var product = products.FirstOrDefault(product => product.type == type);
 
             if (product == null)
             {
