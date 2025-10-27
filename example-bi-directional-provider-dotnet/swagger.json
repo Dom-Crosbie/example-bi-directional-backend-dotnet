@@ -50,7 +50,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "type",
             "in": "path",
             "required": true,
             "schema": {
@@ -101,6 +101,10 @@
             "nullable": true
           },
           "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
             "type": "string",
             "nullable": true
           }
