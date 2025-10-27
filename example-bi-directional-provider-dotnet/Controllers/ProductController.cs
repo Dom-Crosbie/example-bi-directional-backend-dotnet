@@ -25,8 +25,8 @@ namespace Provider.Controllers
             return products;
         }
 
-        // GET /products/{id}
-        [HttpGet("{id:int}")]
+        // GET /products/{type}
+        [HttpGet("{type}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<Product> GetProduct(string type)
